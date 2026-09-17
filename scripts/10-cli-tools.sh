@@ -15,6 +15,7 @@ PACKAGES=(
   nodejs
   npm
   ripgrep
+  rsync
   starship
   stow
   ttf-jetbrains-mono
