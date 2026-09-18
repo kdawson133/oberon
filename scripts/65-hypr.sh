@@ -1,7 +1,9 @@
 #!/bin/bash
 # Install Packages from Arch Repos
 BOTTLES=(
+  xorg-xwayland
   hyprland
+  hyprpaper
   xdg-desktop-portal-hyprland
   noctalia
   fuzzel
@@ -14,6 +16,10 @@ BOTTLES=(
   ristretto
   xwayland-satellite
   ddcutil
+  noto-fonts
+  noto-fonts-emoji
+  ttf-jetbrains-mono
+  ttf-jetbrains-mono-nerd
 )
 sudo pacman -S ${BOTTLES[@]} --noconfirm --needed
 yay -S bibata-cursor-theme kora-icon-theme adwaita-qt6 --noconfirm --needed
