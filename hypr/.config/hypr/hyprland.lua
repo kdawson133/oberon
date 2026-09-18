@@ -60,7 +60,8 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("/usr/bin/nextcloud --background")
     hl.exec_cmd("/opt/1Password/1password --silent")
     hl.exec_cmd("env XDG_SESSION_TYPE=X11 /opt/piavpn/bin/pia-client --quiet")
-    hl.exec_cmd("/usr/lib/hyprpolkitagent/hyprpolkitagent")
+    hl.exec_cmd("udiskie")
+--    hl.exec_cmd("/usr/lib/hyprpolkitagent/hyprpolkitagent")
     hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 32")
 end)
 
@@ -290,6 +291,10 @@ hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
+
+-- Move Columns
+hl.bind(mainMod .. " + CTRL + right", hl.dsp.layout("swapcol r"))
+hl.bind(mainMod .. " + CTRL + left", hl.dsp.layout("swapcol l"))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
