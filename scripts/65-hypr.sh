@@ -11,7 +11,7 @@ BOTTLES=(
   gnome-keyring
   gnome-themes-extra
   nwg-look
-  qt6c
+  qt6ct
   seahorse
   ristretto
   xwayland-satellite
@@ -22,4 +22,4 @@ BOTTLES=(
   ttf-jetbrains-mono-nerd
 )
 sudo pacman -S ${BOTTLES[@]} --noconfirm --needed
-yay -S bibata-cursor-theme kora-icon-theme adwaita-qt6 --noconfirm --needed
+yay -S adwaita-qt6 bibata-cursor-theme kora-icon-theme adwaita-qt6 --noconfirm --needed
