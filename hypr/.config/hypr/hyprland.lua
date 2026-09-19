@@ -60,8 +60,8 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("/usr/bin/nextcloud --background")
     hl.exec_cmd("/opt/1Password/1password --silent")
     hl.exec_cmd("env XDG_SESSION_TYPE=X11 /opt/piavpn/bin/pia-client --quiet")
+    -- hl.exec_cmd("/opt/RoonBridge/start.sh")
     hl.exec_cmd("udiskie")
---    hl.exec_cmd("/usr/lib/hyprpolkitagent/hyprpolkitagent")
     hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 32")
 end)
 
@@ -303,6 +303,11 @@ for i = 1, 10 do
     hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
     hl.bind(mainMod .. " + CTRL + " .. key,     hl.dsp.window.move({ workspace = i, follow = false }))
 end
+-- Cycle through work spaces
+hl.bind(mainMod .. " + page_down", hl.dsp.focus({ workspace = "r+1" }))
+hl.bind(mainMod .. " + page_up", hl.dsp.focus({ workspace = "r-1" }))
+hl.bind(mainMod .. " + CTRL + page_down", hl.dsp.window.move({ workspace = "r+1" }))
+hl.bind(mainMod .. " + CTRL + page_up", hl.dsp.window.move({ workspace = "r-1" }))
 
 -- Resize columns in scrolling layout
 hl.bind(mainMod .. " + R", hl.dsp.layout("colresize +conf"))
