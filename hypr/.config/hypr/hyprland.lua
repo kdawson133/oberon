@@ -36,7 +36,7 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal = "ghostty"
-local fileManager = "thunar"
+local fileManager = "nemo"
 local menu = "fuzzel"
 local webBrowser = "brave-origin"
 local bar = "noctalia"
