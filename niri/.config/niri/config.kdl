@@ -396,9 +396,10 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
-    Mod+B hotkey-overlay-title="Open a Browser: Brave Origin" { spawn "brave-origin"; }
-    
+    Mod+B hotkey-overlay-title="Open a Browser: brave-origin" { spawn "brave-origin"; }
+    Mod+E hotkey-overlay-title="Open a File Explorer: nemo" { spawn "nemo"; } 
     // Core Noctalia binds
     Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }

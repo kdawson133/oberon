@@ -25,12 +25,15 @@ PACKAGES=(
   wget
   wl-clipboard
   xclip
+  xdg-user-dirs
   xsel
   zoxide
   zsh
 )
-mkdir ~/.ssh
-chmod 700 ~/.ssh
+sudo pacman -S --needed --noconfirm ${PACKAGES[@]}
+# mkdir ~/.ssh
+# chmod 700 ~/.ssh
+xdg-user-dirs-update
 echo 'ZDOTDIR=$HOME/.config/zsh' | sudo tee -a /etc/zsh/zshenv
 echo
 echo 'CLI TOOLS INSTALLED'
