@@ -399,7 +399,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Mod+B hotkey-overlay-title="Open a Browser: brave-origin" { spawn "brave-origin"; }
-    Mod+E hotkey-overlay-title="Open a File Explorer: nemo" { spawn "nemo"; } 
+    Mod+E hotkey-overlay-title="Open a File Explorer: Files" { spawn-sh "nautilus --new-window"; } 
     // Core Noctalia binds
     Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
